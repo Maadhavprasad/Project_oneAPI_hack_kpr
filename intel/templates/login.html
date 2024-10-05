@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/login.css') }}"">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <title>Login & Signup Page</title>
+</head>
+<body onload="checkLoginStatus()">
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='video_files/WhatsApp Video 2024-09-28 at 6.40.55 PM.mp4') }}" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+
+    <div class="form-container">
+        <div class="tab-container">
+            <button class="tab-button active" onclick="showLogin()">Log In</button>
+            <button class="tab-button" onclick="showSignup()">Sign Up</button>
+        </div>
+        
+        <div id="login-form-container">
+            <h2>Log In</h2>
+            <form id="login-form">
+                <input type="text" id="email" placeholder="Email Address" required><br>
+                <input type="password" id="password" placeholder="Password" required><br>
+                <label><input type="checkbox" id="rememberMe"> Remember Me</label><br>
+                <button type="button" onclick="login('{{ url_for('main') }}')">Log In</button>
+
+                <a href="https://accounts.google.com/signin/v2/recoveryidentifier" target="_blank" id="lost-password">Lost your password?</a>
+            </form>
+        </div>
+
+        <div id="signup-form-container" style="display: none;">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" id="signup-email" placeholder="Email Address" required><br>
+                <input type="password" id="signup-password" placeholder="Password" required><br>
+                <button type="button" onclick="signup()">Sign Up</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/login.js') }}"></script>
+</body>
+</html>

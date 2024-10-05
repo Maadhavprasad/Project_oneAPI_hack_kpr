@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Information Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/student.css') }}">
+</head>
+<body>
+    <!-- Background Video -->
+    <div class="video-container">
+        <video autoplay muted loop id="background-video">
+            <source src="{{ url_for('static', filename='video_files/WhatsApp Video 2024-10-01 at 11.19.28 AM.mp4') }}" type="video/mp4">
+            Your browser does not support HTML5 video.
+        </video>
+    </div>
+    <div class="container">
+        <div class="question-box">
+            <center><h2>What sort of degree are you pursuing?</h2></center>
+            <div class="button-group">
+                <center>
+                    <a href="{{ url_for('routine') }}"><button id="ug-button">UG</button></a>
+                    <a href="{{ url_for('routine') }}"><button id="pg-button">PG</button></a>
+                </center>
+            </div>
+        </div>
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+/* Body settings */
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-size: cover;
+    background-position     : center;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s, color 0.3s;
+    opacity: 0.5px;
+}   
+
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6;
+}    
+
+
+/* Main container */
+.container {
+    background: transparent;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Question box styling */
+.question-box {
+    background-color :transparent;
+    border: none; 
+    border-radius: 10px;
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    width: 100%;
+    transition: all 0.3s ease, transform 0.2s ease;
+}
+
+/* Question text */
+.question-box p {
+    font-size: 20px;
+    margin-bottom: 30px;
+    color: black;
+}
+
+/* Button group */
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Buttons styling */
+.button-group button {
+    background-color: #007BFF;
+    color: white;
+    border: none ;
+    padding: 12px 25px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease,transform 0.2s ease;
+}
+
+/* Hover effect for buttons */
+.button-group button:hover {
+    background-color: #0056b3;
+    color:#fff;
+    transform: scale(1.1);
+}
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-image: url('A_visually_appealing,_modern,_and_subtle_backgroun.png'); /* Replace with the actual path if needed */
+    background-size: cover;
+    background-position: center;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+}

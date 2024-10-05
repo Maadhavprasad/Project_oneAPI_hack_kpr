@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/keypage.css') }}"> <!-- Ensure correct path to your CSS file -->
+</head>
+<body>
+    <nav>
+        <div class="profile-section">
+            <img src="https://th.bing.com/th/id/R.c3631c652abe1185b1874da24af0b7c7?rik=XBP%2fc%2fsPy7r3HQ&riu=http%3a%2f%2fpluspng.com%2fimg-png%2fpng-user-icon-circled-user-icon-2240.png&ehk=z4ciEVsNoCZtWiFvQQ0k4C3KTQ6wt%2biSysxPKZHGrCc%3d&risl=&pid=ImgRaw&r=0" alt="User Icon" class="profile-icon">
+        </div>
+        <div class="weather">
+            <ul class="weather456">
+                <li class="weather123">
+                    <a href="weather.html">
+                        <img src="https://static.vecteezy.com/system/resources/previews/010/989/785/original/sunny-weather-3d-rendering-isolated-on-transparent-background-ui-ux-icon-design-web-and-app-trend-png.png" width="80px" height="80px" style="padding: 20px;" alt="Weather">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <ul class="menu">
+                <li><a href="regular-day.html" class="menu-item">Regular Day</a></li><br>
+                <li><a href="special-day.html" class="menu-item special">Special Day</a></li><br>
+                <li><a href="achievements.html" class="menu-item">Achievements</a></li><br>
+                <li><a href="goalsongoing.html" class="menu-item">Goals Ongoing</a></li><br>
+            </ul>
+            <a href="login.html">
+                <button class="logout-button">Logout</button>
+            </a>
+        </div>
+        <div class="content">
+            <div class="chat-bot-section">
+                <div class="chat-bot-icon">
+                    <img src="/content/drive/MyDrive/path_to_your_image.png" alt="Chat Bot">
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</body>
+</html>

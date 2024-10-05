@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Activity Tracker</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/281/770/desktop-wallpaper-best-6-clock-powerpoint-backgrounds-on-hip-time-management.jpg'); /* Replace with your image URL */
+
+        }
+        .container {
+            width: 500px;
+            background-color: transparent; /* Semi-transparent white background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+        }
+        form { margin-bottom: 20px; }
+        input, button { margin: 5px 0; padding: 10px; width: calc(100% - 22px); } /* Full width minus padding */
+        button { background-color: #007BFF; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        button:hover { background-color: #0056b3; }
+        #activities { border: 1px solid #ccc; padding: 10px; margin-bottom: 20px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <center>
+           <h1>Your special routine</h1>
+        </center>
+        <form id="activityForm">
+            <ul>
+                <li>
+                    <input type="time" id="startTime" required placeholder="Start Time"><br>
+                    <input type="time" id="endTime" required placeholder="End Time"><br>
+                    <input type="text" id="activity" required placeholder="Activity"><br>
+                </li>
+            </ul>
+            <button type="submit">Add Activity</button>
+        </form>
+        <div id="activities"></div>
+        <a href="goal.html"><button id="finish">Finish</button></a>
+    </div>
+
+    <script>
+        $(document).ready(function() {
+            let activities = [];
+
+            $('#activityForm').submit(function(e) {
+                e.preventDefault();
+                let activity = {
+                    startTime: $('#startTime').val(),
+                    endTime: $('#endTime').val(),
+                    activity: $('#activity').val()
+                };
+                activities.push(activity);
+                updateActivitiesList();
+                this.reset();
+            });
+
+            $('#finish').click(function() {
+                $.ajax({
+                    url: '/save_activities',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify(activities),
+                    success: function(response) {
+                        alert('Activities saved successfully!');
+                        activities = [];
+                        updateActivitiesList();
+                    },
+                    error: function() {
+                        alert('Error saving activities.');
+                    }
+                });
+            });
+
+            function updateActivitiesList() {
+                let html = '<h2>Added Activities:</h2>';
+                activities.forEach(function(activity, index) {
+                    html += `<p>${index + 1}. ${activity.startTime} - ${activity.endTime}: ${activity.activity}</p>`;
+                });
+                $('#activities').html(html);
+            }
+        });
+    </script>
+</body>
+</html>

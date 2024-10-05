@@ -1,0 +1,56 @@
+.{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url('https://e1.pxfuel.com/desktop-wallpaper/281/770/desktop-wallpaper-best-6-clock-powerpoint-backgrounds-on-hip-time-management.jpg');
+    
+}
+
+.container {
+    text-align: center;
+}
+
+h1 {
+    color: rgb(0, 0, 0);
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+form {
+    display: inline-block;
+    text-align: center;
+}
+
+input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #485e8e;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+    text-align: center;
+}
+
+button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
