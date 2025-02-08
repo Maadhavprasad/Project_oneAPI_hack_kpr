@@ -1,4 +1,6 @@
 Taak maker : Taak refers to action to be done in greek
+
+
 Overview
 The Taak maker is an intelligent web-based application designed to help users plan and track their daily activities efficiently. Using Natural Language Processing (NLP), it suggests personalized tasks, tracks their completion, and provides real-time feedback on user progress.
 
